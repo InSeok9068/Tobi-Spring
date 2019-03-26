@@ -25,11 +25,6 @@ public class UserDaoTest_Junit {
 		dao.deleteAll();
 		assertThat(dao.getCount(), is(0));
 		
-		//생성자 사용으로 인해 사용 X
-		/*user.setId("gymee");
-		user.setName("spring");
-		user.setPassword("springno1");*/
-
 		dao.add(user1);
 		
 		assertThat(dao.getCount(), is(1));
@@ -37,16 +32,10 @@ public class UserDaoTest_Junit {
 		dao.add(user2);
 		
 		assertThat(dao.getCount(), is(2));
-		
+		 
 		dao.add(user3);
 		
 		assertThat(dao.getCount(), is(3));
 			
-//		System.out.println(user.getId() + "입력");
-//		
-//		User user2 = dao.get(user.getId());
-//		
-//		assertThat(user2.getName(), is(user.getName()));
-//		assertThat(user2.getPassword(), is(user.getPassword()));
 	}
 }
